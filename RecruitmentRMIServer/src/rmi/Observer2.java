@@ -10,6 +10,6 @@ import java.rmi.Remote;
  * @author Cal
  */
 public interface Observer2 extends Remote {
-      public void Update2();
+      public void Update2(int x);
 
 }

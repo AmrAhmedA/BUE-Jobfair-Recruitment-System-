@@ -15,7 +15,7 @@ public class Admin implements Subject2 {
     
  private final String AdminEmail="Admin@recruitment.com";
     private final String AdminPassword="Admin";
-    
+    public int x;
     private ArrayList<Observer2> Observers2 = new ArrayList<Observer2>();
  
     private void Admin () 
@@ -114,7 +114,7 @@ public void AcceptVacancyRequest(Vacancy V)
     @Override
     public void NotifyEmployer() {
              for (int i = 0; i < Observers2.size(); i++) {
-            Observers2.get(i).Update2();
+            Observers2.get(i).Update2(x);
         }
     }
 

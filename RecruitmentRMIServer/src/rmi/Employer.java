@@ -62,8 +62,8 @@ public void AddAcceptedVacancy (int VacancyID)
  
  
     @Override
-    public void Update2() {
-        AddAcceptedVacancy();
+    public void Update2(int x) {
+        AddAcceptedVacancy(x);
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
