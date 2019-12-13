@@ -7,7 +7,7 @@ package BUEJobFairJframe;
 
 /**
  *
- * @author Amr
+ * @author Amr Ahmed
  */
 public class AdminControlPanelJframe extends javax.swing.JFrame {
 
