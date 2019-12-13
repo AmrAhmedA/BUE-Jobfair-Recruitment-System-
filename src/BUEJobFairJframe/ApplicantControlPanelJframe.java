@@ -9,15 +9,13 @@ package BUEJobFairJframe;
  *
  * @author Amr
  */
-public class AdminControlPanelJframe extends javax.swing.JFrame {
+public class ApplicantControlPanelJframe extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdminControlPanelJframe
+     * Creates new form ApplicantControlPanel
      */
-    public AdminControlPanelJframe() {
+    public ApplicantControlPanelJframe() {
         initComponents();
-        this.setLocationRelativeTo(null);
-
     }
 
     /**
@@ -71,7 +69,6 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -205,7 +202,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel28.setBackground(new java.awt.Color(45, 118, 232));
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(0, 139, 139));
-        jLabel28.setText("Admin");
+        jLabel28.setText("Applicant");
 
         jLabel29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel29.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -229,7 +226,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BUEJobFairJframe/Images/Admin Settings Male_50px.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BUEJobFairJframe/Images/Manager_50px.png"))); // NOI18N
 
         Student.setForeground(new java.awt.Color(0, 139, 139));
         Student.setModel(new javax.swing.table.DefaultTableModel(
@@ -255,7 +252,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel39.setBackground(new java.awt.Color(0, 139, 139));
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 139, 139));
-        jLabel39.setText("Accept Vacancy ");
+        jLabel39.setText("View All Vacancy");
         jLabel39.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel39MouseClicked(evt);
@@ -512,7 +509,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                                     .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(31, 31, 31)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -626,10 +623,10 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
 
     private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseClicked
 
-
     }//GEN-LAST:event_jPanel18MouseClicked
 
     private void jPanel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel16MouseClicked
+
     }//GEN-LAST:event_jPanel16MouseClicked
 
     private void jPanel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MouseClicked
@@ -657,20 +654,21 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApplicantControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApplicantControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApplicantControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApplicantControlPanelJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminControlPanelJframe().setVisible(true);
+                new ApplicantControlPanelJframe().setVisible(true);
             }
         });
     }
