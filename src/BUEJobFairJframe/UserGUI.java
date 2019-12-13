@@ -7,7 +7,7 @@ package BUEJobFairJframe;
 
 /**
  *
- * @author Amr
+ * @author Amr Ahmed
  */
 public class UserGUI extends javax.swing.JFrame {
 
