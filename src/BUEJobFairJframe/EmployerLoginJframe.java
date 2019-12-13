@@ -16,6 +16,8 @@ public class EmployerLoginJframe extends javax.swing.JFrame {
      */
     public EmployerLoginJframe() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
