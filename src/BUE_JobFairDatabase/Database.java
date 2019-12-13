@@ -36,4 +36,43 @@ public class Database {
         Employercollection = database.getCollection("Employers"); // Employer Collection
         
     }
+    public void insertApplicant(Applicant A) {
+        Applicantcollection.insertOne(Document.parse(gson.toJson(A)));
+    }
+
+    public void deleteApplicant(Applicant A) {
+         Applicantcollection.deleteOne(Document.parse(gson.toJson(A)));
+        
+    }
+    public void getAllApplicants() {
+    ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
+   ArrayList<Applicant> A = new ArrayList<Applicant>();
+   for (int i=1;i<docs.size();i++){
+       Document doc = docs.get(i);
+       Applicant app = gson.fromJson(doc.toJson(), Applicant.class);
+       A.add(app);
+   }
+    return A;    
+    
+    }
+     public void insertEmployer(Employer A) {
+        Applicantcollection.insertOne(Document.parse(gson.toJson(A)));
+    }
+
+    public void deleteEmployer(Employer E) {
+         Applicantcollection.deleteOne(Document.parse(gson.toJson(E)));
+        
+    }
+    public void getAllEmployers() {
+    ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
+   ArrayList<Employer> E = new ArrayList<Employer>();
+   for (int i=1;i<docs.size();i++){
+       Document doc = docs.get(i);
+       Employer emp = gson.fromJson(doc.toJson(), Employer.class);
+       E.add(emp);
+   }
+    return E;    
+    
+    }
+    
 }
