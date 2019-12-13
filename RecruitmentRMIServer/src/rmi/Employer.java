@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author Cal
  */
 public class Employer extends User implements Observer2 {
-    
-     private String CompanyName ;
-    private ArrayList <Vacancy> AcceptedVacancies= new ArrayList <Vacancy>();
+
+    private String CompanyName;
+    private ArrayList<Vacancy> AcceptedVacancies = new ArrayList<Vacancy>();
 
     public Employer(String CompanyName, int ID, String Name, int Age, String Password, String Email, String Nationality, int PhoneNumber, String Address, String AccountType) {
         super(ID, Name, Age, Password, Email, Nationality, PhoneNumber, Address, AccountType);
@@ -41,31 +41,23 @@ public class Employer extends User implements Observer2 {
     public String toString() {
         return "Employer{" + "CompanyName=" + CompanyName + ", AcceptedVacancies=" + AcceptedVacancies + '}';
     }
-    
-public void AddAcceptedVacancy (int VacancyID)
- {
-     
- }
- 
- public void RemoveAcceptedVacancy (int VacancyID)
- {
-     
- }
- 
- /*public Vacancy GetAcceptedVacancy()
+
+    public void AddAcceptedVacancy(int VacancyID) {
+
+    }
+
+    public void RemoveAcceptedVacancy(int VacancyID) {
+
+    }
+
+    /*public Vacancy GetAcceptedVacancy()
  {
      
  }*/
- 
- 
- 
- 
- 
     @Override
     public void Update2(int x) {
         AddAcceptedVacancy(x);
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

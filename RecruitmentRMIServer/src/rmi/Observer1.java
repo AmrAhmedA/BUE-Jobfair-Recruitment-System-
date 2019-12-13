@@ -4,11 +4,14 @@
  * and open the template in the editor.
  */
 package rmi;
+
 import java.rmi.Remote;
+
 /**
  *
  * @author Cal
  */
-public interface Observer1 extends Remote{
-     public void Update1();
+public interface Observer1 extends Remote {
+
+    public void Update1();
 }

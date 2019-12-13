@@ -10,6 +10,7 @@ package rmi;
  * @author Cal
  */
 public class Application {
+
     private int ApplicationID;
 
     public Application(int ApplicationID) {
@@ -33,15 +34,11 @@ public class Application {
     {
        ///NOT DONE
     } */
-    
-    
-    public void SubmitApplication(Application App,Applicant A)
-    {
-        
+    public void SubmitApplication(Application App, Applicant A) {
+
     }
-    
-    public void FilterApplication (int AppID)
-    {
-        
-    }    
+
+    public void FilterApplication(int AppID) {
+
+    }
 }

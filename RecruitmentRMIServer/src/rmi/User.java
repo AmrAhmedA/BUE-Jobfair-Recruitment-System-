@@ -10,7 +10,7 @@ package rmi;
  * @author Cal
  */
 public abstract class User {
-    
+
     private int ID;
     private String Name;
     private int Age;
@@ -109,22 +109,19 @@ public abstract class User {
     public String toString() {
         return "User{" + "ID=" + ID + ", Name=" + Name + ", Age=" + Age + ", Password=" + Password + ", Email=" + Email + ", Nationality=" + Nationality + ", PhoneNumber=" + PhoneNumber + ", Address=" + Address + ", AccountType=" + AccountType + '}';
     }
-    
-     public void Login(String E,String P)
-    {
-        
+
+    public void Login(String E, String P) {
+
     }
-    
-    public void CreateAccount(int id,String name,int age,String password, String mail, String nationality,int phonenumber,String address,String accType)
-    {
-        
+
+    public void CreateAccount(int id, String name, int age, String password, String mail, String nationality, int phonenumber, String address, String accType) {
+
     }
-    
-    public void EditAccount(int id){
+
+    public void EditAccount(int id) {
     }
-    
-    public void DeleteAccount(int id){
+
+    public void DeleteAccount(int id) {
     }
-    
-    
+
 }

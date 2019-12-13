@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Database;
+
 import com.google.gson.Gson;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -17,12 +18,13 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import rmi.*;
 import rminewserver.RMINewServer;
+
 /**
  *
  * @author Cal
  */
 public class Database {
-    
+
     private MongoClient client;
     private MongoDatabase database;
     private MongoCollection<Document> Applicantcollection;
@@ -46,7 +48,7 @@ public class Database {
 
     }
 
-    public ArrayList <Applicant> getAllApplicants() {
+    public ArrayList<Applicant> getAllApplicants() {
         ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
         ArrayList<Applicant> A = new ArrayList<Applicant>();
         for (int i = 1; i < docs.size(); i++) {
@@ -67,7 +69,7 @@ public class Database {
 
     }
 
-    public ArrayList <Employer> getAllEmployers() {
+    public ArrayList<Employer> getAllEmployers() {
         ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
         ArrayList<Employer> E = new ArrayList<Employer>();
         for (int i = 1; i < docs.size(); i++) {
@@ -77,28 +79,26 @@ public class Database {
         }
         return E;
     }
-    
+
     public void insertVacancy(Vacancy V) {
         Applicantcollection.insertOne(Document.parse(gson.toJson(V)));
     }
 
     public void deleteVacancy(Vacancy V) {
-         Applicantcollection.deleteOne(Document.parse(gson.toJson(V)));
+        Applicantcollection.deleteOne(Document.parse(gson.toJson(V)));
 
     }
+
     public ArrayList<Vacancy> getAllVacancy() {
-    ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
-   ArrayList<Vacancy> V = new ArrayList<Vacancy>();
-   for (int i=1;i<docs.size();i++){
-       Document doc = docs.get(i);
-       Vacancy vac = gson.fromJson(doc.toJson(), Vacancy.class);
-       V.add(vac);
-   }
-    return V;
+        ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
+        ArrayList<Vacancy> V = new ArrayList<Vacancy>();
+        for (int i = 1; i < docs.size(); i++) {
+            Document doc = docs.get(i);
+            Vacancy vac = gson.fromJson(doc.toJson(), Vacancy.class);
+            V.add(vac);
+        }
+        return V;
 
     }
-    
-    
-    
-    
+
 }

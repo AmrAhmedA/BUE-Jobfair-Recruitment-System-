@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package rmi;
+
 import java.util.ArrayList;
 import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;
 import java.rmi.server.UnicastRemoteObject;
+
 /**
  *
  * @author Cal
  */
-public class Applicant extends UnicastRemoteObject implements RecruitmentInterface,Observer1 {
-    
+public class Applicant extends UnicastRemoteObject implements RecruitmentInterface, Observer1 {
+
     private Application ApplicationObj;
-    private ArrayList <Application> SubmittedApplications= new ArrayList <Application>();
+    private ArrayList<Application> SubmittedApplications = new ArrayList<Application>();
     private String Achievement;
     private String PastJobs;
     private String Degree;
@@ -30,10 +32,6 @@ public class Applicant extends UnicastRemoteObject implements RecruitmentInterfa
         this.Degree = Degree;
         this.YearsOfExpertise = YearsOfExpertise;
     }
-
-   
-
-   
 
     public Application getApplicationObj() {
         return ApplicationObj;
@@ -87,12 +85,11 @@ public class Applicant extends UnicastRemoteObject implements RecruitmentInterfa
     public String toString() {
         return "Applicant{" + "ApplicationObj=" + ApplicationObj + ", SubmittedApplications=" + SubmittedApplications + ", Achievement=" + Achievement + ", PastJobs=" + PastJobs + ", Degree=" + Degree + ", YearsOfExpertise=" + YearsOfExpertise + '}';
     }
-    
+
     @Override
     public void Update1() {
-       // AddAcceptedVacancy();
+        // AddAcceptedVacancy();
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }
