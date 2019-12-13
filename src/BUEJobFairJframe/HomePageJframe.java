@@ -411,9 +411,9 @@ public class HomePageJframe extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-    AboutUS AU = new AboutUS();
-    AU.setVisible(true);
-    this.dispose();
+        AboutUS AU = new AboutUS();
+        AU.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel15MouseClicked
 
     /**

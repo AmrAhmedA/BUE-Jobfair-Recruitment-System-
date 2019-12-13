@@ -9,14 +9,13 @@ package BUEJobFairJframe;
  *
  * @author Amr
  */
-public class ApplicantLoginJframe extends javax.swing.JFrame {
+public class AdminLoginJframe extends javax.swing.JFrame {
 
     /**
-     * Creates new form ApplicantLoginJframe
+     * Creates new form AdminLoginJframe
      */
-    public ApplicantLoginJframe() {
+    public AdminLoginJframe() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -57,7 +56,6 @@ public class ApplicantLoginJframe extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -209,7 +207,7 @@ public class ApplicantLoginJframe extends javax.swing.JFrame {
         jLabel28.setBackground(new java.awt.Color(45, 118, 232));
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(0, 139, 139));
-        jLabel28.setText("Applicant");
+        jLabel28.setText("Admin");
 
         jLabel29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel29.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -402,20 +400,20 @@ public class ApplicantLoginJframe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ApplicantLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ApplicantLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ApplicantLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ApplicantLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ApplicantLoginJframe().setVisible(true);
+                new AdminLoginJframe().setVisible(true);
             }
         });
     }
