@@ -633,7 +633,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel16MouseClicked
 
     private void jPanel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MouseClicked
-        //View Parent
+        //Call get all employers method       
     }//GEN-LAST:event_jPanel19MouseClicked
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked

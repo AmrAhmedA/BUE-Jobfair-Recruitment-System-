@@ -65,8 +65,8 @@ public class Database {
     }
     public void getAllEmployers() {
     ArrayList<Document> docs = Applicantcollection.find().into(new ArrayList<Document>());
-   ArrayList<Employer> E = new ArrayList<Employer>();
-   for (int i=1;i<docs.size();i++){
+    ArrayList<Employer> E = new ArrayList<Employer>();
+    for (int i=1;i<docs.size();i++){
        Document doc = docs.get(i);
        Employer emp = gson.fromJson(doc.toJson(), Employer.class);
        E.add(emp);
