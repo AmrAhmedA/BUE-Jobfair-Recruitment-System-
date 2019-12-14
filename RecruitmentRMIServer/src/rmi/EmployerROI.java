@@ -9,6 +9,14 @@ package rmi;
  *
  * @author Cal
  */
-public interface Observer1 {
-     public void Update1();
+public interface EmployerROI {
+    
+    
+       public void GetEmployerInfo();
+       public void GetAllEmployersInfo();
+        
+    
+    
+    
+    
 }

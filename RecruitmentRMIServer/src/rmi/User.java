@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package rmi;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  *
  * @author Cal
  */
-public abstract class User {
 
+public abstract class User extends UnicastRemoteObject implements UserInterface {
+    
     private int ID;
     private String Name;
     private int Age;
@@ -21,7 +24,7 @@ public abstract class User {
     private String Address;
     private String AccountType;
 
-    public User(int ID, String Name, int Age, String Password, String Email, String Nationality, int PhoneNumber, String Address, String AccountType) {
+    public User(int ID, String Name, int Age, String Password, String Email, String Nationality, int PhoneNumber, String Address, String AccountType) throws RemoteException {
         this.ID = ID;
         this.Name = Name;
         this.Age = Age;
@@ -32,6 +35,9 @@ public abstract class User {
         this.Address = Address;
         this.AccountType = AccountType;
     }
+
+    public User() throws RemoteException {
+    }   
 
     public int getID() {
         return ID;
@@ -109,19 +115,28 @@ public abstract class User {
     public String toString() {
         return "User{" + "ID=" + ID + ", Name=" + Name + ", Age=" + Age + ", Password=" + Password + ", Email=" + Email + ", Nationality=" + Nationality + ", PhoneNumber=" + PhoneNumber + ", Address=" + Address + ", AccountType=" + AccountType + '}';
     }
-
-    public void Login(String E, String P) {
-
+    
+    @Override
+     public void Login(String E,String P) throws RemoteException
+    {
+        
     }
-
-    public void CreateAccount(int id, String name, int age, String password, String mail, String nationality, int phonenumber, String address, String accType) {
-
+     
+    @Override
+    public void CreateAccount(int id,String name,int age,String password, String mail, String nationality,int phonenumber,String address,String accType) throws RemoteException
+    {
+        
     }
-
-    public void EditAccount(int id) {
+    
+    @Override
+    public void EditAccount(int id) throws RemoteException
+    {
+        
     }
-
-    public void DeleteAccount(int id) {
-    }
-
+    
+    @Override
+    public void DeleteAccount(int id) throws RemoteException
+    {
+        
+    }       
 }

@@ -5,14 +5,18 @@
  */
 package rmi;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Cal
  */
-public class Vacancy implements Subject1 {
-     private int VacancyID;
+public class Vacancy extends UnicastRemoteObject implements Subject1,VacancyInterface {
+    private int VacancyID;
     private String VacancyJobTitle;
     private int VacancyJobSalary;
     private int VacancyJobYearsOfExperienceRequired;
@@ -21,9 +25,26 @@ public class Vacancy implements Subject1 {
     private String VacancyJobResponsibilities;
     private ArrayList<Application> ReceivedApplications;
     private ApplicantDTO ApplicantData;
-     private ArrayList<Observer1> Observers1 = new ArrayList<Observer1>();
+    private ArrayList<Observer1> Observers1 = new ArrayList<Observer1>();
 
-    public Vacancy(int VacancyID, String VacancyJobTitle, int VacancyJobSalary, int VacancyJobYearsOfExperienceRequired, String VacancyJobType, String VacancyJobRequirements, String VacancyJobResponsibilities, ArrayList<Application> ReceivedApplications, ApplicantDTO ApplicantData) {
+    public Vacancy(int VacancyID, String VacancyJobTitle, int VacancyJobSalary, int VacancyJobYearsOfExperienceRequired, String VacancyJobType, String VacancyJobRequirements,
+            String VacancyJobResponsibilities, ArrayList<Application> ReceivedApplications)throws RemoteException { 
+       
+        this.VacancyID = VacancyID;
+        this.VacancyJobTitle = VacancyJobTitle;
+        this.VacancyJobSalary = VacancyJobSalary;
+        this.VacancyJobYearsOfExperienceRequired = VacancyJobYearsOfExperienceRequired;
+        this.VacancyJobType = VacancyJobType;
+        this.VacancyJobRequirements = VacancyJobRequirements;
+        this.VacancyJobResponsibilities = VacancyJobResponsibilities;
+        this.ReceivedApplications = ReceivedApplications;
+        
+    }
+
+   public Vacancy(int VacancyID, String VacancyJobTitle, int VacancyJobSalary, int VacancyJobYearsOfExperienceRequired, String VacancyJobType, 
+           String VacancyJobRequirements, String VacancyJobResponsibilities, ArrayList<Application> ReceivedApplications, ApplicantDTO ApplicantData)throws RemoteException {
+       
+        
         this.VacancyID = VacancyID;
         this.VacancyJobTitle = VacancyJobTitle;
         this.VacancyJobSalary = VacancyJobSalary;
@@ -33,7 +54,14 @@ public class Vacancy implements Subject1 {
         this.VacancyJobResponsibilities = VacancyJobResponsibilities;
         this.ReceivedApplications = ReceivedApplications;
         this.ApplicantData = ApplicantData;
+    } 
+    
+    
+
+    public Vacancy()throws RemoteException {
     }
+    
+    
 
     public int getVacancyID() {
         return VacancyID;
@@ -105,39 +133,54 @@ public class Vacancy implements Subject1 {
 
     public void setApplicantData(ApplicantDTO ApplicantData) {
         this.ApplicantData = ApplicantData;
-    }
+    } 
 
     @Override
     public String toString() {
-        return "Vacancy{" + "VacancyID=" + VacancyID + ", VacancyJobTitle=" + VacancyJobTitle + ", VacancyJobSalary=" + VacancyJobSalary + ", VacancyJobYearsOfExperienceRequired=" + VacancyJobYearsOfExperienceRequired + ", VacancyJobType=" + VacancyJobType + ", VacancyJobRequirements=" + VacancyJobRequirements + ", VacancyJobResponsibilities=" + VacancyJobResponsibilities + ", ReceivedApplications=" + ReceivedApplications + ", ApplicantData=" + ApplicantData + '}';
+        return "Vacancy{" + "VacancyID=" + VacancyID + ", VacancyJobTitle=" + VacancyJobTitle + ", VacancyJobSalary=" + VacancyJobSalary + ", VacancyJobYearsOfExperienceRequired=" + VacancyJobYearsOfExperienceRequired + ", VacancyJobType=" + VacancyJobType + ", VacancyJobRequirements=" + VacancyJobRequirements + ", VacancyJobResponsibilities=" + VacancyJobResponsibilities + ", ReceivedApplications=" + ReceivedApplications + ", Observers1=" + Observers1 + '}';
     }
+
+
     
-    public void AddNewJob(int VacancyID)
+    @Override
+    public void AddNewJob(int VacancyID) throws RemoteException
     {
    
     }
     
-    public void RemoveJob(int VacancyID){
+    @Override
+    public void RemoveJob(int VacancyID) throws RemoteException { 
     
     }
     
-    public void AddReceivedApplication(Application App){
+    @Override
+    public void AddReceivedApplication(Application App)throws RemoteException {
     
-        
+        ReceivedApplications.add(App);
         NotifyApplicant();
     }
     
-    public void RemoveReceivedApplication(Application App){
-    
+    @Override
+    public void RemoveReceivedApplication(Application App) throws RemoteException {
+        ReceivedApplications.remove(App);
     }
     
-    /*public Application GetReceivedApplication()
+    @Override
+    public Application GetReceivedApplication(int AppID) throws RemoteException
     {
-     //NOT DONE
-    }*/
+        
+     for(int i=0;i<ReceivedApplications.size();i++)
+              {
+                  if(ReceivedApplications.get(i).getApplicationID()==AppID)
+                  {
+                      return ReceivedApplications.get(i);
+                  }
+                  else
+                      return null;
+              }
+             return null; 
+    }
     
- 
-
         @Override
     public void AddObserver(Observer1 o1) {
        Observers1.add(o1);
@@ -151,7 +194,7 @@ public class Vacancy implements Subject1 {
     @Override
     public void NotifyApplicant() {
              for (int i = 0; i < Observers1.size(); i++) {
-            Observers1.get(i).Update1();
+  Observers1.get(i).Update1();
         }
     }
     

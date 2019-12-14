@@ -5,14 +5,13 @@
  */
 package rmi;
 
-import java.rmi.Remote;
-
 /**
  *
  * @author Cal
  */
-public interface Subject1 extends Remote {
-
+public interface Subject1  {
+    
+    
     public void AddObserver(Observer1 o1);
 
     public void RemoveObserver(Observer1 o1);

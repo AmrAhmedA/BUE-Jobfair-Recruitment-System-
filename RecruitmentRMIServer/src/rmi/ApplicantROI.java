@@ -5,10 +5,13 @@
  */
 package rmi;
 
+
 /**
  *
  * @author Cal
  */
-public interface Observer1 {
-     public void Update1();
+public interface ApplicantROI  {
+    
+     public void GetApplicantInfo();
+     public void GetAllApplicantsInfo();
 }

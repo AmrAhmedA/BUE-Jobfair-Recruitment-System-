@@ -7,8 +7,8 @@ package rmi;
 
 /**
  *
- * @author Cal
+ * @author Amr
  */
-public interface Observer1 {
-     public void Update1();
+public interface VacancyInterface {
+    
 }

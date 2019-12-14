@@ -5,6 +5,11 @@
  */
 package BUEJobFairJframe;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
 /**
  *
  * @author Amr
@@ -725,6 +730,352 @@ public class EmployerControlPanelJframe extends javax.swing.JFrame {
             }
         });
     }
+
+    public JTable getParent() {
+        return Parent;
+    }
+
+    public void setParent(JTable Parent) {
+        this.Parent = Parent;
+    }
+
+    public JTable getStudent() {
+        return Student;
+    }
+
+    public void setStudent(JTable Student) {
+        this.Student = Student;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public void setjLabel13(JLabel jLabel13) {
+        this.jLabel13 = jLabel13;
+    }
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public void setjLabel14(JLabel jLabel14) {
+        this.jLabel14 = jLabel14;
+    }
+
+    public JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public void setjLabel15(JLabel jLabel15) {
+        this.jLabel15 = jLabel15;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel27() {
+        return jLabel27;
+    }
+
+    public void setjLabel27(JLabel jLabel27) {
+        this.jLabel27 = jLabel27;
+    }
+
+    public JLabel getjLabel28() {
+        return jLabel28;
+    }
+
+    public void setjLabel28(JLabel jLabel28) {
+        this.jLabel28 = jLabel28;
+    }
+
+    public JLabel getjLabel29() {
+        return jLabel29;
+    }
+
+    public void setjLabel29(JLabel jLabel29) {
+        this.jLabel29 = jLabel29;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel32() {
+        return jLabel32;
+    }
+
+    public void setjLabel32(JLabel jLabel32) {
+        this.jLabel32 = jLabel32;
+    }
+
+    public JLabel getjLabel38() {
+        return jLabel38;
+    }
+
+    public void setjLabel38(JLabel jLabel38) {
+        this.jLabel38 = jLabel38;
+    }
+
+    public JLabel getjLabel39() {
+        return jLabel39;
+    }
+
+    public void setjLabel39(JLabel jLabel39) {
+        this.jLabel39 = jLabel39;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel40() {
+        return jLabel40;
+    }
+
+    public void setjLabel40(JLabel jLabel40) {
+        this.jLabel40 = jLabel40;
+    }
+
+    public JLabel getjLabel41() {
+        return jLabel41;
+    }
+
+    public void setjLabel41(JLabel jLabel41) {
+        this.jLabel41 = jLabel41;
+    }
+
+    public JLabel getjLabel44() {
+        return jLabel44;
+    }
+
+    public void setjLabel44(JLabel jLabel44) {
+        this.jLabel44 = jLabel44;
+    }
+
+    public JLabel getjLabel45() {
+        return jLabel45;
+    }
+
+    public void setjLabel45(JLabel jLabel45) {
+        this.jLabel45 = jLabel45;
+    }
+
+    public JLabel getjLabel46() {
+        return jLabel46;
+    }
+
+    public void setjLabel46(JLabel jLabel46) {
+        this.jLabel46 = jLabel46;
+    }
+
+    public JLabel getjLabel47() {
+        return jLabel47;
+    }
+
+    public void setjLabel47(JLabel jLabel47) {
+        this.jLabel47 = jLabel47;
+    }
+
+    public JLabel getjLabel48() {
+        return jLabel48;
+    }
+
+    public void setjLabel48(JLabel jLabel48) {
+        this.jLabel48 = jLabel48;
+    }
+
+    public JLabel getjLabel49() {
+        return jLabel49;
+    }
+
+    public void setjLabel49(JLabel jLabel49) {
+        this.jLabel49 = jLabel49;
+    }
+
+    public JLabel getjLabel50() {
+        return jLabel50;
+    }
+
+    public void setjLabel50(JLabel jLabel50) {
+        this.jLabel50 = jLabel50;
+    }
+
+    public JLabel getjLabel51() {
+        return jLabel51;
+    }
+
+    public void setjLabel51(JLabel jLabel51) {
+        this.jLabel51 = jLabel51;
+    }
+
+    public JLabel getjLabel52() {
+        return jLabel52;
+    }
+
+    public void setjLabel52(JLabel jLabel52) {
+        this.jLabel52 = jLabel52;
+    }
+
+    public JLabel getjLabel53() {
+        return jLabel53;
+    }
+
+    public void setjLabel53(JLabel jLabel53) {
+        this.jLabel53 = jLabel53;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel11() {
+        return jPanel11;
+    }
+
+    public void setjPanel11(JPanel jPanel11) {
+        this.jPanel11 = jPanel11;
+    }
+
+    public JPanel getjPanel14() {
+        return jPanel14;
+    }
+
+    public void setjPanel14(JPanel jPanel14) {
+        this.jPanel14 = jPanel14;
+    }
+
+    public JPanel getjPanel15() {
+        return jPanel15;
+    }
+
+    public void setjPanel15(JPanel jPanel15) {
+        this.jPanel15 = jPanel15;
+    }
+
+    public JPanel getjPanel16() {
+        return jPanel16;
+    }
+
+    public void setjPanel16(JPanel jPanel16) {
+        this.jPanel16 = jPanel16;
+    }
+
+    public JPanel getjPanel18() {
+        return jPanel18;
+    }
+
+    public void setjPanel18(JPanel jPanel18) {
+        this.jPanel18 = jPanel18;
+    }
+
+    public JPanel getjPanel19() {
+        return jPanel19;
+    }
+
+    public void setjPanel19(JPanel jPanel19) {
+        this.jPanel19 = jPanel19;
+    }
+
+    public JPanel getjPanel20() {
+        return jPanel20;
+    }
+
+    public void setjPanel20(JPanel jPanel20) {
+        this.jPanel20 = jPanel20;
+    }
+
+    public JPanel getjPanel21() {
+        return jPanel21;
+    }
+
+    public void setjPanel21(JPanel jPanel21) {
+        this.jPanel21 = jPanel21;
+    }
+
+    public JPanel getjPanel22() {
+        return jPanel22;
+    }
+
+    public void setjPanel22(JPanel jPanel22) {
+        this.jPanel22 = jPanel22;
+    }
+
+    public JPanel getjPanel5() {
+        return jPanel5;
+    }
+
+    public void setjPanel5(JPanel jPanel5) {
+        this.jPanel5 = jPanel5;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Parent;

@@ -4,33 +4,57 @@
  * and open the template in the editor.
  */
 package rmi;
-
 import java.util.ArrayList;
 import java.rmi.RemoteException;
-import java.rmi.server.RMIClientSocketFactory;
-import java.rmi.server.RMIServerSocketFactory;
-import java.rmi.server.UnicastRemoteObject;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Cal
  */
-public class Applicant extends UnicastRemoteObject implements RecruitmentInterface, Observer1 {
-
+public class Applicant extends User implements Observer1,ApplicantInterface {
+    
     private Application ApplicationObj;
-    private ArrayList<Application> SubmittedApplications = new ArrayList<Application>();
+    private ArrayList <Application> SubmittedApplications= new ArrayList <Application>();
     private String Achievement;
     private String PastJobs;
     private String Degree;
     private int YearsOfExpertise;
+    private ApplicantMapper AM;
+    private ArrayList<Vacancy> RecommendedVacancies = new ArrayList <Vacancy>();
 
-    public Applicant(Application ApplicationObj, String Achievement, String PastJobs, String Degree, int YearsOfExpertise, int i) throws RemoteException {
-        super(i);
+    public Applicant(Application ApplicationObj, String Achievement, String PastJobs, String Degree, int YearsOfExpertise, ApplicantMapper AM, int ID,
+            String Name, int Age, String Password, String Email, String Nationality, int PhoneNumber, String Address, String AccountType) throws RemoteException {
+        super(ID, Name, Age, Password, Email, Nationality, PhoneNumber, Address, AccountType);
         this.ApplicationObj = ApplicationObj;
         this.Achievement = Achievement;
         this.PastJobs = PastJobs;
         this.Degree = Degree;
         this.YearsOfExpertise = YearsOfExpertise;
+        this.AM = AM;
+    }
+
+    public Applicant(Application ApplicationObj, String Achievement, String PastJobs, String Degree, int YearsOfExpertise, int ID, String Name, int Age
+            , String Password, String Email, String Nationality, int PhoneNumber, String Address, String AccountType) throws RemoteException {
+        super(ID, Name, Age, Password, Email, Nationality, PhoneNumber, Address, AccountType);
+        this.ApplicationObj = ApplicationObj;
+        this.Achievement = Achievement;
+        this.PastJobs = PastJobs;
+        this.Degree = Degree;
+        this.YearsOfExpertise = YearsOfExpertise;
+    }
+
+    public Applicant() throws RemoteException {
+    }
+
+ 
+
+    
+ 
+
+    public Applicant(ApplicantMapper AM) throws RemoteException {
+        this.AM = AM;
     }
 
     public Application getApplicationObj() {
@@ -85,11 +109,54 @@ public class Applicant extends UnicastRemoteObject implements RecruitmentInterfa
     public String toString() {
         return "Applicant{" + "ApplicationObj=" + ApplicationObj + ", SubmittedApplications=" + SubmittedApplications + ", Achievement=" + Achievement + ", PastJobs=" + PastJobs + ", Degree=" + Degree + ", YearsOfExpertise=" + YearsOfExpertise + '}';
     }
-
+    
     @Override
     public void Update1() {
-        // AddAcceptedVacancy();
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Your application has been recived");
+        //Change it according to GUI
     }
 
+    public ArrayList<Vacancy> getRecommendedVacancies() {
+        return RecommendedVacancies;
+    }
+
+    public void setRecommendedVacancies(ArrayList<Vacancy> RecommendedVacancies) {
+        this.RecommendedVacancies = RecommendedVacancies;
+    }
+        
+     
+    
+    
+    
+    @Override
+    public void ViewJobVacancies() throws RemoteException
+    {
+        
+    }
+    
+      @Override
+    public void FilterJobVacancies() throws RemoteException
+    {
+        
+    }
+    
+    
+     @Override
+     public void AddSubmittedApplication(Application A) throws RemoteException
+     {
+         SubmittedApplications.add(A);
+     }
+     
+        @Override
+     public void RemoveSubmittedApplication(Application A) throws RemoteException
+     {
+         SubmittedApplications.remove(A);
+        
+     }
+     
+     public void AddRecommendedJob(Vacancy V){
+       this.RecommendedVacancies.add(V);
+
+   }
+    
 }

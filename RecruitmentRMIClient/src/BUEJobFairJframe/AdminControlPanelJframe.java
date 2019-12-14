@@ -5,6 +5,13 @@
  */
 package BUEJobFairJframe;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 /**
  *
  * @author Amr Ahmed
@@ -17,6 +24,21 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
     public AdminControlPanelJframe() {
         initComponents();
         this.setLocationRelativeTo(null);
+
+    }
+
+    public void PopulateApplicant(String x1, String x2, String x3, int x4) {
+        // Applicant.setModel();
+
+    }
+
+    public void PopulateVacancy() {
+        // Vacancy.setModel();
+
+    }
+
+    public void PopulateEmployer() {
+        // Employer.setModel();
 
     }
 
@@ -48,7 +70,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Student = new javax.swing.JTable();
+        Applicant = new javax.swing.JTable();
         jPanel15 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -65,12 +87,12 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        Parent = new javax.swing.JTable();
+        Employer = new javax.swing.JTable();
         jPanel20 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        Parent1 = new javax.swing.JTable();
+        Vacancy = new javax.swing.JTable();
         jPanel21 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
@@ -239,8 +261,8 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BUEJobFairJframe/Images/Admin Settings Male_50px.png"))); // NOI18N
 
-        Student.setForeground(new java.awt.Color(0, 139, 139));
-        Student.setModel(new javax.swing.table.DefaultTableModel(
+        Applicant.setForeground(new java.awt.Color(0, 139, 139));
+        Applicant.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -251,7 +273,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 "Name", "ID", "Achievement", "Past Jobs", "Degree", "Years  of Expertise"
             }
         ));
-        jScrollPane1.setViewportView(Student);
+        jScrollPane1.setViewportView(Applicant);
 
         jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -438,8 +460,8 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Parent.setForeground(new java.awt.Color(0, 139, 139));
-        Parent.setModel(new javax.swing.table.DefaultTableModel(
+        Employer.setForeground(new java.awt.Color(0, 139, 139));
+        Employer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -458,7 +480,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(Parent);
+        jScrollPane2.setViewportView(Employer);
 
         jPanel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -471,6 +493,11 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         jLabel49.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(0, 139, 139));
         jLabel49.setText("View Applicants");
+        jLabel49.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel49MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -496,8 +523,8 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Parent1.setForeground(new java.awt.Color(0, 139, 139));
-        Parent1.setModel(new javax.swing.table.DefaultTableModel(
+        Vacancy.setForeground(new java.awt.Color(0, 139, 139));
+        Vacancy.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -516,7 +543,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(Parent1);
+        jScrollPane3.setViewportView(Vacancy);
 
         jPanel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel21.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -765,6 +792,10 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel22MouseClicked
 
+    private void jLabel49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseClicked
+
+    }//GEN-LAST:event_jLabel49MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -800,10 +831,395 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
         });
     }
 
+    public JTable getApplicant() {
+        return Applicant;
+    }
+
+    public void setApplicant(DefaultTableModel PopulatedTable) {
+        Applicant.setModel(PopulatedTable);
+    }
+
+    public JTable getEmployer() {
+        return Employer;
+    }
+
+    public void setEmployer(JTable Employer) {
+        this.Employer = Employer;
+    }
+
+    public JTable getVacancy() {
+        return Vacancy;
+    }
+
+    public void setVacancy(JTable Vacancy) {
+        this.Vacancy = Vacancy;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public void setjLabel13(JLabel jLabel13) {
+        this.jLabel13 = jLabel13;
+    }
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public void setjLabel14(JLabel jLabel14) {
+        this.jLabel14 = jLabel14;
+    }
+
+    public JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public void setjLabel15(JLabel jLabel15) {
+        this.jLabel15 = jLabel15;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel27() {
+        return jLabel27;
+    }
+
+    public void setjLabel27(JLabel jLabel27) {
+        this.jLabel27 = jLabel27;
+    }
+
+    public JLabel getjLabel28() {
+        return jLabel28;
+    }
+
+    public void setjLabel28(JLabel jLabel28) {
+        this.jLabel28 = jLabel28;
+    }
+
+    public JLabel getjLabel29() {
+        return jLabel29;
+    }
+
+    public void setjLabel29(JLabel jLabel29) {
+        this.jLabel29 = jLabel29;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel32() {
+        return jLabel32;
+    }
+
+    public void setjLabel32(JLabel jLabel32) {
+        this.jLabel32 = jLabel32;
+    }
+
+    public JLabel getjLabel38() {
+        return jLabel38;
+    }
+
+    public void setjLabel38(JLabel jLabel38) {
+        this.jLabel38 = jLabel38;
+    }
+
+    public JLabel getjLabel39() {
+        return jLabel39;
+    }
+
+    public void setjLabel39(JLabel jLabel39) {
+        this.jLabel39 = jLabel39;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel40() {
+        return jLabel40;
+    }
+
+    public void setjLabel40(JLabel jLabel40) {
+        this.jLabel40 = jLabel40;
+    }
+
+    public JLabel getjLabel41() {
+        return jLabel41;
+    }
+
+    public void setjLabel41(JLabel jLabel41) {
+        this.jLabel41 = jLabel41;
+    }
+
+    public JLabel getjLabel42() {
+        return jLabel42;
+    }
+
+    public void setjLabel42(JLabel jLabel42) {
+        this.jLabel42 = jLabel42;
+    }
+
+    public JLabel getjLabel43() {
+        return jLabel43;
+    }
+
+    public void setjLabel43(JLabel jLabel43) {
+        this.jLabel43 = jLabel43;
+    }
+
+    public JLabel getjLabel44() {
+        return jLabel44;
+    }
+
+    public void setjLabel44(JLabel jLabel44) {
+        this.jLabel44 = jLabel44;
+    }
+
+    public JLabel getjLabel45() {
+        return jLabel45;
+    }
+
+    public void setjLabel45(JLabel jLabel45) {
+        this.jLabel45 = jLabel45;
+    }
+
+    public JLabel getjLabel46() {
+        return jLabel46;
+    }
+
+    public void setjLabel46(JLabel jLabel46) {
+        this.jLabel46 = jLabel46;
+    }
+
+    public JLabel getjLabel47() {
+        return jLabel47;
+    }
+
+    public void setjLabel47(JLabel jLabel47) {
+        this.jLabel47 = jLabel47;
+    }
+
+    public JLabel getjLabel48() {
+        return jLabel48;
+    }
+
+    public void setjLabel48(JLabel jLabel48) {
+        this.jLabel48 = jLabel48;
+    }
+
+    public JLabel getjLabel49() {
+        return jLabel49;
+    }
+
+    public void setjLabel49(JLabel jLabel49) {
+        this.jLabel49 = jLabel49;
+    }
+
+    public JLabel getjLabel50() {
+        return jLabel50;
+    }
+
+    public void setjLabel50(JLabel jLabel50) {
+        this.jLabel50 = jLabel50;
+    }
+
+    public JLabel getjLabel51() {
+        return jLabel51;
+    }
+
+    public void setjLabel51(JLabel jLabel51) {
+        this.jLabel51 = jLabel51;
+    }
+
+    public JLabel getjLabel52() {
+        return jLabel52;
+    }
+
+    public void setjLabel52(JLabel jLabel52) {
+        this.jLabel52 = jLabel52;
+    }
+
+    public JLabel getjLabel53() {
+        return jLabel53;
+    }
+
+    public void setjLabel53(JLabel jLabel53) {
+        this.jLabel53 = jLabel53;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel11() {
+        return jPanel11;
+    }
+
+    public void setjPanel11(JPanel jPanel11) {
+        this.jPanel11 = jPanel11;
+    }
+
+    public JPanel getjPanel14() {
+        return jPanel14;
+    }
+
+    public void setjPanel14(JPanel jPanel14) {
+        this.jPanel14 = jPanel14;
+    }
+
+    public JPanel getjPanel15() {
+        return jPanel15;
+    }
+
+    public void setjPanel15(JPanel jPanel15) {
+        this.jPanel15 = jPanel15;
+    }
+
+    public JPanel getjPanel16() {
+        return jPanel16;
+    }
+
+    public void setjPanel16(JPanel jPanel16) {
+        this.jPanel16 = jPanel16;
+    }
+
+    public JPanel getjPanel17() {
+        return jPanel17;
+    }
+
+    public void setjPanel17(JPanel jPanel17) {
+        this.jPanel17 = jPanel17;
+    }
+
+    public JPanel getjPanel18() {
+        return jPanel18;
+    }
+
+    public void setjPanel18(JPanel jPanel18) {
+        this.jPanel18 = jPanel18;
+    }
+
+    public JPanel getjPanel19() {
+        return jPanel19;
+    }
+
+    public void setjPanel19(JPanel jPanel19) {
+        this.jPanel19 = jPanel19;
+    }
+
+    public JPanel getjPanel20() {
+        return jPanel20;
+    }
+
+    public void setjPanel20(JPanel jPanel20) {
+        this.jPanel20 = jPanel20;
+    }
+
+    public JPanel getjPanel21() {
+        return jPanel21;
+    }
+
+    public void setjPanel21(JPanel jPanel21) {
+        this.jPanel21 = jPanel21;
+    }
+
+    public JPanel getjPanel22() {
+        return jPanel22;
+    }
+
+    public void setjPanel22(JPanel jPanel22) {
+        this.jPanel22 = jPanel22;
+    }
+
+    public JPanel getjPanel5() {
+        return jPanel5;
+    }
+
+    public void setjPanel5(JPanel jPanel5) {
+        this.jPanel5 = jPanel5;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JScrollPane getjScrollPane3() {
+        return jScrollPane3;
+    }
+
+    public void setjScrollPane3(JScrollPane jScrollPane3) {
+        this.jScrollPane3 = jScrollPane3;
+    }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Parent;
-    private javax.swing.JTable Parent1;
-    private javax.swing.JTable Student;
+    private javax.swing.JTable Applicant;
+    private javax.swing.JTable Employer;
+    private javax.swing.JTable Vacancy;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
