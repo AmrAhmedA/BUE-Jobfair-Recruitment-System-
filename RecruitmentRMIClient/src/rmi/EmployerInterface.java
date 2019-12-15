@@ -7,12 +7,19 @@ package rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-
 /**
  *
- * @author Amr
+ * @author Cal
  */
-public interface EmployerInterface extends Remote {
-
-    String getCompanyName() throws RemoteException;
+public interface EmployerInterface extends Remote{
+    
+    
+    
+    public void AddAcceptedVacancy (int VacancyID)throws RemoteException;
+     public void RemoveAcceptedVacancy (int VacancyID)throws RemoteException;
+     public Vacancy GetAcceptedVacancy(int id)throws RemoteException;
+    
+    
+    
+    
 }

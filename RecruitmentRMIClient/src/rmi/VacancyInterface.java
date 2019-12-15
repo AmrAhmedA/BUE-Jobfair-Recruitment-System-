@@ -5,10 +5,21 @@
  */
 package rmi;
 
+import java.rmi.RemoteException;
+
 /**
  *
- * @author Amr
+ * @author Cal
  */
 public interface VacancyInterface {
-    
+
+    public void AddNewJob(int VacancyID) throws RemoteException;
+
+    public void RemoveJob(int VacancyID) throws RemoteException;
+
+    public void AddReceivedApplication(Application App) throws RemoteException;
+
+    public void RemoveReceivedApplication(Application App) throws RemoteException;
+
+    public Application GetReceivedApplication(int AppID) throws RemoteException;
 }

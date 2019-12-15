@@ -27,6 +27,7 @@ public class AdminControlPanelJframe extends javax.swing.JFrame {
 
     }
 
+    
     public void PopulateApplicant(String x1, String x2, String x3, int x4) {
         // Applicant.setModel();
 

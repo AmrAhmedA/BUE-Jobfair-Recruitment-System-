@@ -22,7 +22,7 @@ import java.rmi.Naming;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import rmi.EmployerInterface;
-import rmi.RecruitmentInterface;
+import rmi.ApplicantInterface;
 
 public class AdminControlPanelJframeController {
 
@@ -55,7 +55,7 @@ public class AdminControlPanelJframeController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                RecruitmentInterface R = (RecruitmentInterface) r.lookup("Test");
+                ApplicantInterface R = (ApplicantInterface) r.lookup("Test");
 
                 // we should use for loop in order to complete the iterations incase of displaying the whole applicants for the admin
                 String ApplicantAchievement = R.getAchievement();
@@ -83,7 +83,7 @@ public class AdminControlPanelJframeController {
 
     }
 
-    class GetViewEmployers implements ActionListener {
+    class GetViewEmployersBtnAction implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
